@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>게시판</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="card header">
+      <h1>게시판</h1>
+      <div class="spacer"></div>
+      <button id="btnList" class="btn">목록</button>
+      <button id="btnWrite" class="btn btn-primary">글쓰기</button>
+    </header>
+
+    <!-- 목록 -->
+    <section id="view-list" class="card">
+      <h2 class="card-title">글 목록</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="width:90px">번호</th>
+            <th>제목</th>
+            <th style="width:220px">작성일</th>
+            <th style="width:240px">기능</th>
+          </tr>
+        </thead>
+        <tbody id="listBody"></tbody>
+      </table>
+    </section>
+
+    <!-- 상세 -->
+    <section id="view-detail" class="card hidden">
+      <div class="post-header">
+        <h2 id="d-title" class="card-title"></h2>
+        <div id="d-meta" class="meta muted"></div>
+      </div>
+
+      <article class="post-content">
+        <pre id="d-content" class="content"></pre>
+      </article>
+
+      <div class="actions">
+        <button id="d-edit" class="btn">수정</button>
+        <button id="d-delete" class="btn btn-danger">삭제</button>
+        <button id="d-back" class="btn btn-ghost">뒤로</button>
+      </div>
+    </section>
+
+    <!-- 작성/수정 -->
+    <section id="view-form" class="card hidden">
+      <h2 id="form-title" class="card-title">글쓰기</h2>
+      <form id="postForm" class="form">
+        <label class="label">제목</label>
+        <input name="title" class="input" placeholder="제목" required />
+        <label class="label">내용</label>
+        <textarea name="content" class="textarea" placeholder="내용" rows="10" required></textarea>
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">저장</button>
+          <button type="button" id="form-cancel" class="btn btn-ghost">취소</button>
+        </div>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

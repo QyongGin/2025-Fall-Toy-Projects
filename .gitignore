@@ -1,0 +1,18 @@
+# IntelliJ 관련 파일
+.idea/
+*.iml
+out/
+
+# 자바 컴파일 파일
+*.class
+target/
+
+# npm 관련
+node_modules/
+npm-debug.log
+
+# 맥OS 파일
+.DS_Store
+
+# 로그 파일
+*.log
