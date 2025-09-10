@@ -40,7 +40,7 @@
             </div>
 
             <div class="btn-group">
-                <button type="submit" class="btn-submit">등록</button>
+                <button type="submit" class="btn-submit" >등록</button>
                 <button type="button"
                         class="btn-cancel"
                         onclick="location.href='list.jsp'">취소</button>
